@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>pydoc &mdash; ConfigSpace 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="ConfigSpace 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Manual" href="quickstart.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Manual"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ConfigSpace 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-config_space">
+<span id="pydoc"></span><h1>pydoc<a class="headerlink" href="#module-config_space" title="Permalink to this headline">¶</a></h1>
+<p>Created on April 02, 2015</p>
+<p>output via logging package</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">author:</th><td class="field-body">Marius Lindauer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">contact:</th><td class="field-body"><a class="reference external" href="mailto:lindauer&#37;&#52;&#48;cs&#46;uni-freiburg&#46;de">lindauer<span>&#64;</span>cs<span>&#46;</span>uni-freiburg<span>&#46;</span>de</a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body">GPLv2</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="config_space.Condition">
+<em class="property">class </em><code class="descclassname">config_space.</code><code class="descname">Condition</code><span class="sig-paren">(</span><em>head</em>, <em>cond</em>, <em>values</em>, <em>values_indx</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.Condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>parameter condition whether a parameter is active or not
+parameter &lt;cond&gt; is active if &lt;head&gt; was set with a value in &lt;values&gt;</p>
+<dl class="method">
+<dt id="config_space.Condition.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>head</em>, <em>cond</em>, <em>values</em>, <em>values_indx</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.Condition.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor; assumed format: &lt;cond&gt; | &lt;head&gt; in {&lt;values&gt;}</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>head</strong> &#8211; head parameter name</li>
+<li><strong>cond</strong> &#8211; conditioned parameter name</li>
+<li><strong>values</strong> &#8211; values in clause</li>
+<li><strong>values_indx</strong> &#8211; indexes of &lt;values&gt; according to &lt;head&gt; parameter &lt;values&gt; list</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="config_space.ConfigSpace">
+<em class="property">class </em><code class="descclassname">config_space.</code><code class="descname">ConfigSpace</code><span class="sig-paren">(</span><em>pcs_file</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>configuration space</p>
+<dl class="method">
+<dt id="config_space.ConfigSpace._ConfigSpace__read_pcs">
+<code class="descname">_ConfigSpace__read_pcs</code><span class="sig-paren">(</span><em>pcs_file</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace._ConfigSpace__read_pcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>reads PCS file and generates data structure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pcs_file</strong> &#8211; path to pcs_file (str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>pcs_file</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor - reads the pcs file and converts it to internal data structure</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pcs_file</strong> &#8211; path to pcs file (str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="config_space.ConfigSpace.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#config_space.ConfigSpace.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace._check_forbidden">
+<code class="descname">_check_forbidden</code><span class="sig-paren">(</span><em>vec</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace._check_forbidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks whether a configuration vec is forbidden given the pcs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vec</strong> &#8211; parameter configuration vector</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bool whehter configuratio is forbidden</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace._fix_active">
+<code class="descname">_fix_active</code><span class="sig-paren">(</span><em>param_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace._fix_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>fixes values of non-active parameters in a parameter configuration vector - inplace operation!</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>param_vec</strong> &#8211; set all non-active parameters to numpy.nan</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">param_vec</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace._get_map_conditionals">
+<code class="descname">_get_map_conditionals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace._get_map_conditionals" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate an array with: at categorical child index [parent, values_indx]
+(saves result in self._map_conds)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace._sort_params">
+<code class="descname">_sort_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace._sort_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>sorts parameters by their conditional parents (first unconditioned parameters) 
+(saves results in self.__ordered_params)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace.convert_param_dict">
+<code class="descname">convert_param_dict</code><span class="sig-paren">(</span><em>param_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace.convert_param_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a parameter configuration dict (name,value) to the internal vector representation
+assumption: non-active parameters are not present in param_dict (imputed as numpy.nan)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>param_dict</strong> &#8211; parameter configuration dictionary (mapping of active parameters to value)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">configuration numpy vector (non-active encoded as numpy.nan)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace.convert_param_vector">
+<code class="descname">convert_param_vector</code><span class="sig-paren">(</span><em>param_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace.convert_param_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a parameter configuration vector to its original dictionary representation
+WARNING: non-active parameters are not represented in the returned dictionary</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>param_vec</strong> &#8211; parameter configuration vector (non-active encoded as numpy.nan)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">dictionary with active parameter -&gt; value</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace.get_default_config_dict">
+<code class="descname">get_default_config_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace.get_default_config_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a configuration (dict: name, value) of the (active) default parameters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary with name -&gt; value</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace.get_random_config_vector">
+<code class="descname">get_random_config_vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace.get_random_config_vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates a random configuration vector; uses rejection sampling (can be slow with too many forbidden constraints);
+the parameters are ordered according to self.__ordered_params</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">random configuration numpy vector (non-active parameters are encoded as numpy.nan)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace.get_random_neighbor">
+<code class="descname">get_random_neighbor</code><span class="sig-paren">(</span><em>param_vec</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace.get_random_neighbor" title="Permalink to this definition">¶</a></dt>
+<dd><p>changes one of the active parameters to a neighbor value
+categorical: random.choice
+int/real : gaussian(x_old, 0.1)
+uses only active parameters of &lt;param_vec&gt; 
+&#8211; using rejection sampling to reject non-active parameters and forbidden configurations</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>param_vec</strong> &#8211; parameter configuration vector</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">neighbor parameter vector (neigborhood size 1)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="config_space.ConfigSpace.impute_non_active">
+<code class="descname">impute_non_active</code><span class="sig-paren">(</span><em>vec</em>, <em>value=-512</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.ConfigSpace.impute_non_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>imputes non active parameter values by value if value is a number (no type check!)
+or if value is</p>
+<blockquote>
+<div>&#8220;def&#8221;: default value of parameters 
+&#8220;mean&#8221;: mean range of parameters</div></blockquote>
+<p>WARNING: This function does not check which parameter-values are active</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>vec</strong> &#8211; parameter vector</li>
+<li><strong>value</strong> &#8211; imputation value (numerical)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">parameter vector with numpy.nan values replaced by &lt;value&gt;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="config_space.Parameter">
+<em class="property">class </em><code class="descclassname">config_space.</code><code class="descname">Parameter</code><span class="sig-paren">(</span><em>name</em>, <em>type_</em>, <em>values</em>, <em>default</em>, <em>logged=False</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.Parameter" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="config_space.Parameter.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>type_</em>, <em>values</em>, <em>default</em>, <em>logged=False</em><span class="sig-paren">)</span><a class="headerlink" href="#config_space.Parameter.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> &#8211; name of parameter</li>
+<li><strong>type</strong> &#8211; type of parameter (see ParameterType)</li>
+<li><strong>values</strong> &#8211; list of possible discrete values or min-max bounds for numerical parameters</li>
+<li><strong>default</strong> &#8211; default value</li>
+<li><strong>logged</strong> &#8211; use log scale of value range (bool)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="config_space.Parameter.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#config_space.Parameter.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="config_space.ParameterType">
+<em class="property">class </em><code class="descclassname">config_space.</code><code class="descname">ParameterType</code><a class="headerlink" href="#config_space.ParameterType" title="Permalink to this definition">¶</a></dt>
+<dd><p>class to define numbers for paramter types</p>
+<dl class="attribute">
+<dt id="config_space.ParameterType.__weakref__">
+<code class="descname">__weakref__</code><a class="headerlink" href="#config_space.ParameterType.__weakref__" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of weak references to the object (if defined)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="quickstart.html"
+                        title="previous chapter">Manual</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/autodoc.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="quickstart.html" title="Manual"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ConfigSpace 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Marius Lindauer.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
